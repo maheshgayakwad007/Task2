@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Portfolio</title>
+    <style>
+        /* Basic Reset & Styles */
+        body {
+            font-family: Times New Roman, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2em 0;
+            background-color: #444;
+            color: white;
+        }
+
+        /* About section */
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .about img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #333;
+        }
+        .about p {
+            max-width: 500px;
+        }
+
+        /* Skills section */
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            background: #333;
+            color: white;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Projects section */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .projects h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+        .project-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .project-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            margin: 10px 0;
+        }
+        .project-card p {
+            padding: 0 10px 10px;
+        }
+
+        /* Resume button */
+        .resume {
+            text-align: center;
+        }
+        .resume a {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .resume a:hover {
+            background: #555;
+        }
+
+        /* Contact */
+        .contact p {
+            text-align: center;
+            font-size: 18px;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="skills.html">Skill</a>
+        <a href="services.html">Services</a>
+        <a href="experience.html">Experience</a>
+        <a href="works.html">Works</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">My Portfolio</div>
+        <h1>Mahesh Gayakwad</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <img src="myphoto.jpg" alt="My photo">
+        <p>Hello! I'm Mahesh, a passionate web developer with experience in building responsive and interactive websites. I love turning ideas into reality using code. Let's create something amazing together!</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript</li>
+            <li>C Programming</li>
+            <li>Python</li>
+            <li>Responsive Design</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="limbda.png" alt="Project 1">
+                <h3>limbda Student Portal</h3>
+                <p>A responsive website built with HTML, CSS, and JavaScript to help students.</p>
+            </div>
+            <div class="project-card">
+                <img src="tic-tac-toe.png" alt="Project 2">
+                <h3>Games tic tac toe</h3>
+                <p>A game for multiple users.</p>
+            </div>
+            <div class="project-card">
+                <img src="Calculator.png" alt="Project 3">
+                <h3>Calculator</h3>
+                <p>A calculator to perform all basic operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume">
+        <h2>Download My Resume</h2>
+        <a href="resume.pdf" download>Download PDF</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Gmail: gayakwadmahesh007@gmail.com | Phone: +91 8088892799</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mahesh Gayakwad. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
